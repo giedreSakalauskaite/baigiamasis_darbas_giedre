@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation test" parallel="methods" thread-count="1">
+    <test name="SKYTECH">
+        <classes>
+            <class name="lt.giedre.pom.test.skytech.LoginTest"></class>
+            <class name="lt.giedre.pom.test.skytech.MyDataTest"></class>
+            <class name="lt.giedre.pom.test.skytech.SearchTest"></class>
+            <class name="lt.giedre.pom.test.skytech.CartTest"></class>
+        </classes>
+    </test>
+</suite>
+
