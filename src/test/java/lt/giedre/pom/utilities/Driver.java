@@ -9,12 +9,13 @@ import java.time.Duration;
 
 public class Driver {
     private static WebDriver webDriver;
+
     public static void setChromeDriver() {
-        WebDriverManager.chromiumdriver().setup();
+        WebDriverManager.chromedriver().setup();
         System.setProperty("webdriver.http.factory", "jdk-http-client");
-        ChromeOptions options = new ChromeOptions();
-        webDriver=new ChromeDriver(options);
-//        options.addArguments("--headless=new");
+        ChromeOptions optionsChrome = new ChromeOptions();
+        optionsChrome.addArguments("--start-maximized");
+        webDriver = new ChromeDriver(optionsChrome);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
     }
 
@@ -23,6 +24,6 @@ public class Driver {
     }
 
     public static void quitWebDriver() {
-       webDriver.quit();
+        webDriver.quit();
     }
 }
